@@ -10,7 +10,7 @@ export default function DashboardLayout({
       <div className="fixed">
         <NavBarDashbardComponent />
       </div>
-      <div className="ml-96 overflow-y-auto">{children}</div>
+      <div className="ml-16 md:ml-96 overflow-y-auto">{children}</div>
     </>
   );
 }

@@ -3,6 +3,6 @@ import profil from "@/assets/images/thispersondoesnotexist.jpg";
 
 export default function Avatar() {
   return (
-    <Image src={profil} alt="Claudette" className="size-16 rounded-full" />
+    <Image src={profil} alt="Claudette" className="size-10 md:size-16 rounded-full" />
   );
 }
