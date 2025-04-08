@@ -1,14 +1,45 @@
-import ArrowButton from "@/components/ui/ArrowButton";
+"use client";
+
 import Button from "@/components/ui/Button";
+import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+
+const buttons = ["Prêts", "Affacturage"];
 
 export default function CommercialSection() {
+  const [Selected, setSelected] = useState(0);
+
   return (
     <div className="bg-[#F7F8FB] py-16">
-      <div className="flex justify-between md:flex-row flex-col px-4 mx-auto max-w-[1700px]">
-        <div className="w-full flex md:flex-col flex-row">
-          <ArrowButton />
-          <ArrowButton />
+      <div className="flex flex-col md:flex-row justify-between md:px-6 px-4 mx-auto max-w-[1700px]">
+        <div className="w-full flex md:gap-7 flex-row md:flex-col mb-8 md:mb-0">
+          {buttons.map((t, i) => (
+            <button
+              key={i}
+              onClick={() => setSelected(i)}
+              className={`flex items-center gap-3 py-2 px-6 cursor-pointer relative hover:text-liqtrade-green group ${
+                Selected == i ? "text-liqtrade-green" : "text-liqtrade-grey"
+              }`}
+            >
+              <p className="text-2xl font-bold relative items-center gap-3 flex">
+                {t}
+                <span
+                  className={`absolute bottom-0 left-0 w-full h-[1px] bg-liqtrade-green inline-block ${
+                    Selected == i
+                      ? "opacity-100"
+                      : "opacity-0 group-hover:opacity-100"
+                  }`}
+                ></span>
+                <FaArrowRightLong
+                  className={`${
+                    Selected == i ? "text-liqtrade-green" : "text-liqtrade-grey"
+                  } group-hover:text-liqtrade-green`}
+                />
+              </p>
+            </button>
+          ))}
         </div>
+
         <div className="w-full flex flex-col gap-5">
           <p>
             Des taux compétitifs en quelques clics. Quel que soit votre projet,

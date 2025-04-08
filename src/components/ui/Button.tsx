@@ -19,7 +19,7 @@ export default function Button({
           : variant == "secondary"
           ? "bg-black text-white rounded-xl"
           : variant == "tertiary"
-          ? "bg-liqtrade-blue font-bold text-white rounded-sm"
+          ? "bg-liqtrade-blue font-bold text-white rounded-md"
           : variant === "outline"
           ? "border-2 border-liqtrade-green text-liqtrade-green rounded-xl"
           : ""

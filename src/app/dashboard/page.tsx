@@ -22,11 +22,11 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="bg-[#f7f8fb] h-full flex flex-col gap-11 py-20">
-      <div className="px-20 flex flex-col gap-11">
+    <div className="bg-[#f7f8fb] min-h-screen h-full flex flex-col gap-11 py-20 md:px-20 px-4">
+      <div className=" flex flex-col gap-11">
         <div className="flex justify-between">
-          <div className="font-bold text-4xl">Bonjour Claudette !</div>
-          <div>
+          <div className="font-bold md:text-4xl text-xl">Bonjour Claudette !</div>
+          <div className="hidden md:flex">
             <Avatar />
           </div>
         </div>
@@ -34,14 +34,14 @@ export default function DashboardPage() {
           <div>
             <Tabs name={ScreenArray} funct={selectScreen} selected={Screen} />
           </div>
-          <div>
+          <div className="md:flex hidden">
             <Button name="Demander un financement" variant="tertiary" />
           </div>
         </div>
       </div>
 
       {Screen == SelectScreen.PRET ? (
-        <div className="pl-20 flex flex-col gap-11">
+        <div className="flex flex-col gap-11">
           <Account />
           <InfoFinance />
         </div>

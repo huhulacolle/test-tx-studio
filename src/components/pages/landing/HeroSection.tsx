@@ -1,5 +1,6 @@
 import ArrowButton from "@/components/ui/ArrowButton";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -12,14 +13,18 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
             Notre intérêt, <br /> c&apos;est le vôtre.
           </h1>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-600 w-64 md:w-96">
             Simple, efficace et rapide. Profitez du service Liqtrade sans
             garantie personnelle.
           </p>
         </div>
-        <div className="mt-6 flex gap-4 justify-center">
-          <Button name="Se connecter" />
-          <ArrowButton />
+        <div className="mt-6 flex md:gap-4 justify-center items-center">
+          <Link href={"/dashboard"}>
+            <Button name="Se connecter" />
+          </Link>
+          <Link href={"/dashboard"}>
+            <ArrowButton />
+          </Link>
         </div>
       </div>
     </div>
