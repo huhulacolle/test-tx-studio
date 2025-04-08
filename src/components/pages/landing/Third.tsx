@@ -49,7 +49,7 @@ export default function LandingThird() {
   ];
 
   return (
-    <div className="py-9 flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <div className="grid grid-cols-2 gap-4 px-44 py-24">
         {card.map((c, i) => (
           <Card

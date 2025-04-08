@@ -17,7 +17,7 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <NavBarComponent />
+        {/* <NavBarComponent /> */}
         {children}
       </body>
     </html>

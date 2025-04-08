@@ -57,8 +57,8 @@ export default function NavBarComponent() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <div> <Link href={"connecter"}> <Button variant="outline" name="S'inscrire" /> </Link> </div>
-          <div><Link href={"connecter"}> <Button name="Se connecter" /> </Link> </div>
+          <div> <Link href={"/dashboard"}> <Button variant="outline" name="S'inscrire" /> </Link> </div>
+          <div><Link href={"/dashboard"}> <Button name="Se connecter" /> </Link> </div>
         </div>
       </div>
     </nav>
