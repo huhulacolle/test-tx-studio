@@ -51,58 +51,64 @@ export default function NavBarDashbardComponent() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-96 items-center h-screen flex flex-col gap-14 overflow-y-auto">
-      <div className="flex mt-16">
-        <Link href={"/"}>
-          <Image
-            src={logo}
-            alt="liqtrade"
-            className="h-10 w-48 object-contain"
-          />
-        </Link>
-      </div>
-      <div className="flex flex-col gap-5">
-        {button1.map((b, i) => (
-          <Link
-            key={i}
-            href={b.url}
-            className={`flex items-center gap-5 pl-5 pr-28 py-3 text-[#9E9E9E] ${
-              pathname == b.url ? "text-liqtrade-blue bg-[#F2F3F899]" : ""
-            } hover:text-liqtrade-blue hover:bg-[#F2F3F899]`}
-          >
-            <div>{b.icon}</div>
-            <div>{b.name}</div>
-          </Link>
-        ))}
-      </div>
-      <div>
-        <div className="flex flex-col gap-5">
-          {button2.map((b, i) => (
-            <Link
-              key={i}
-              href={b.url}
-              className={`flex items-center gap-5 pl-5 pr-28 py-3 text-[#9E9E9E] ${
-                pathname == b.url ? "text-liqtrade-blue  bg-[#F2F3F899]" : ""
-              } hover:text-liqtrade-blue hover:bg-[#F2F3F899]`}
-            >
-              <div>{b.icon}</div>
-              <div>{b.name}</div>
+    <>
+      <div className="fixed top-0 w-96 bg-white">
+        <nav className="items-center h-screen flex flex-col gap-14 overflow-y-auto mx-auto">
+          <div className="flex mt-16">
+            <Link href={"/"}>
+              <Image
+                src={logo}
+                alt="liqtrade"
+                className="h-10 w-48 object-contain"
+              />
             </Link>
-          ))}
-        </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            {button1.map((b, i) => (
+              <Link
+                key={i}
+                href={b.url}
+                className={`flex items-center gap-5 pl-5 pr-28 py-3 text-[#9E9E9E] ${
+                  pathname == b.url ? "text-liqtrade-blue bg-[#F2F3F899]" : ""
+                } hover:text-liqtrade-blue hover:bg-[#F2F3F899]`}
+              >
+                <div>{b.icon}</div>
+                <div>{b.name}</div>
+              </Link>
+            ))}
+          </div>
+          <div>
+            <div className="flex flex-col gap-5">
+              {button2.map((b, i) => (
+                <Link
+                  key={i}
+                  href={b.url}
+                  className={`flex items-center gap-5 pl-5 pr-28 py-3 text-[#9E9E9E] ${
+                    pathname == b.url
+                      ? "text-liqtrade-blue  bg-[#F2F3F899]"
+                      : ""
+                  } hover:text-liqtrade-blue hover:bg-[#F2F3F899]`}
+                >
+                  <div>{b.icon}</div>
+                  <div>{b.name}</div>
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="mt-auto mb-5 flex items-center gap-5">
+            <div>
+              <Avatar />
+            </div>
+            <div className="flex flex-col">
+              <p className="font-bold">Claudette Archambault</p>
+              <p className="text-sm">
+                Statut Vérification KYC :{" "}
+                <span className="text-liqtrade-green font-bold">Valide</span>
+              </p>
+            </div>
+          </div>
+        </nav>
       </div>
-      <div className="mt-auto mb-5 flex items-center gap-5">
-        <div>
-          <Avatar />
-        </div>
-        <div className="flex flex-col">
-          <p className="font-bold">Claudette Archambault</p>
-          <p className="text-sm">
-            Statut Vérification KYC :{" "}
-            <span className="text-liqtrade-green font-bold">Valide</span>
-          </p>
-        </div>
-      </div>
-    </nav>
+    </>
   );
 }

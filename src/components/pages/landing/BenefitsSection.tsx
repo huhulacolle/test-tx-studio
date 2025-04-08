@@ -1,6 +1,6 @@
 import Card from "@/components/ui/Card";
 
-export default function LandingThird() {
+export default function BenefitsSection() {
   const card: {
     title: string;
     description: string;
@@ -49,17 +49,15 @@ export default function LandingThird() {
   ];
 
   return (
-    <div className="flex justify-center items-center">
-      <div className="grid grid-cols-2 gap-4 px-44 py-24">
-        {card.map((c, i) => (
-          <Card
-            key={i}
-            title={c.title}
-            description={c.description}
-            icon={c.icon}
-          />
-        ))}
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[1700px] px-4 mx-auto py-24">
+      {card.map((c, i) => (
+        <Card
+          key={i}
+          title={c.title}
+          description={c.description}
+          icon={c.icon}
+        />
+      ))}
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import LandingFirst from "@/components/pages/landing/First";
-import LandingSecond from "@/components/pages/landing/Second";
-import LandingThird from "@/components/pages/landing/Third";
+import HeroSection from "@/components/pages/landing/HeroSection";
+import CommercialSection from "@/components/pages/landing/CommercialSection";
+import BenefitsSection from "@/components/pages/landing/BenefitsSection";
 
 export default function Home() {
   return (
     <>
-      <LandingFirst />
-      <LandingSecond />
-      <LandingThird />
+      <HeroSection />
+      <CommercialSection />
+      <BenefitsSection />
     </>
   );
 }
