@@ -1,7 +1,7 @@
 import Image from "next/image";
-import logo from "@/assets/logo/logoliqtrade.jpg";
+import logo from "@/assets/logos/logoliqtrade.jpg";
 import Link from "next/link";
-import Button from "../ui/Button";
+import Button from "../../ui/Button";
 
 export default function NavBarComponent() {
   const link1 = [
@@ -31,7 +31,7 @@ export default function NavBarComponent() {
   ];
 
   return (
-    <nav className="py-3 px-20 flex justify-between">
+    <nav className="py-5 px-20 flex justify-between">
       <div className="flex items-center gap-10">
         <div className="mr-16">
           <Link href="/">

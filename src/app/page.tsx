@@ -1,9 +1,13 @@
+import LandingFirst from "@/components/pages/landing/First";
+import LandingSecond from "@/components/pages/landing/Second";
+import LandingThird from "@/components/pages/landing/Third";
+
 export default function Home() {
   return (
-    <div>
-      {/* <button className="bg-[#30D174] hover:bg-[#25B463] text-white font-semibold py-2 px-4 rounded">
-        Se connecter
-      </button> */}
-    </div>
+    <>
+      <LandingFirst />
+      <LandingSecond />
+      <LandingThird />
+    </>
   );
 }
