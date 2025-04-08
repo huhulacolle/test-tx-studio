@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import logo from "@/assets/logos/logoliqtrade.jpg";
 import Link from "next/link";
 import Button from "../../ui/Button";
+import { usePathname } from "next/navigation";
 
 export default function NavBarComponent() {
   const link1 = [
@@ -29,6 +32,12 @@ export default function NavBarComponent() {
       name: "Publication",
     },
   ];
+
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/dashboard")) {
+    return null;
+  }
 
   return (
     <nav className="py-5 px-20 flex justify-between">

@@ -7,20 +7,21 @@ export default function Button({
 }: {
   onClick?: () => void;
   name: string;
-  variant?: "primary" | "secondary" | "outline",
-  className?: string
+  variant?: "primary" | "secondary" | "tertiary" | "outline";
+  className?: string;
 }) {
-
   return (
     <button
       onClick={onClick}
-      className={`cursor-pointer py-3 px-9 rounded-xl ${
+      className={`cursor-pointer py-3 px-9 ${
         variant === "primary"
-          ? "bg-liqtrade-green text-white"
+          ? "bg-liqtrade-green text-white rounded-xl"
           : variant == "secondary"
-          ? "bg-black text-white"
+          ? "bg-black text-white rounded-xl"
+          : variant == "tertiary"
+          ? "bg-liqtrade-blue font-bold text-white rounded-sm"
           : variant === "outline"
-          ? "border-2 border-liqtrade-green text-liqtrade-green"
+          ? "border-2 border-liqtrade-green text-liqtrade-green rounded-xl"
           : ""
       }`}
     >

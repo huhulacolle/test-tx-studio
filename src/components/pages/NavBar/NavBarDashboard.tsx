@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import logo from "@/assets/logos/logoliqtrade.jpg";
-import profil from "@/assets/images/thispersondoesnotexist.jpg";
+
 import Link from "next/link";
 import { FaArrowRightArrowLeft, FaHeadset, FaPerson } from "react-icons/fa6";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import { CiSettings } from "react-icons/ci";
+import Avatar from "@/components/ui/Avatar";
 
 export default function NavBarDashbardComponent() {
   const button1 = [
@@ -52,7 +53,13 @@ export default function NavBarDashbardComponent() {
   return (
     <nav className="w-96 items-center h-screen flex flex-col gap-14 overflow-y-auto">
       <div className="flex mt-16">
-        <Image src={logo} alt="liqtrade" className="h-10 w-48 object-contain" />
+        <Link href={"/"}>
+          <Image
+            src={logo}
+            alt="liqtrade"
+            className="h-10 w-48 object-contain"
+          />
+        </Link>
       </div>
       <div className="flex flex-col gap-5">
         {button1.map((b, i) => (
@@ -86,11 +93,7 @@ export default function NavBarDashbardComponent() {
       </div>
       <div className="mt-auto mb-5 flex items-center gap-5">
         <div>
-          <Image
-            src={profil}
-            alt="Claudette"
-            className="size-14 rounded-full"
-          />
+          <Avatar />
         </div>
         <div className="flex flex-col">
           <p className="font-bold">Claudette Archambault</p>
