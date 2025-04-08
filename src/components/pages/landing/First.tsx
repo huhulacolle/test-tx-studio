@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 
 export default function LandingFirst() {
   return (
-    <div className="md:bg-[url(@/assets/images/phone.png)] bg-none bg-no-repeat bg-right h-screen flex items-center">
+    <div className="md:bg-[url(/phone.png)] bg-none bg-no-repeat bg-right h-screen flex items-center">
       <div className="mx-28 flex flex-col gap-20">
         <div>
           <div>
