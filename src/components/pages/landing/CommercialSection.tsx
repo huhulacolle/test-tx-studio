@@ -24,11 +24,7 @@ export default function CommercialSection() {
               <p className="text-2xl font-bold relative items-center gap-3 flex">
                 {t}
                 <span
-                  className={`absolute bottom-0 left-0 w-full h-[1px] bg-liqtrade-green inline-block ${
-                    Selected == i
-                      ? "opacity-100"
-                      : "opacity-0 group-hover:opacity-100"
-                  }`}
+                  className="absolute bottom-0 left-0 w-full h-[1px] bg-liqtrade-green inline-block opacity-0 group-hover:opacity-100"
                 ></span>
                 <FaArrowRightLong
                   className={`${
