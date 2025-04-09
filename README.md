@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projet Test pour TX Studio
 
-## Getting Started
+Ce dépôt contient un projet test réalisé pour l'entreprise TX Studio. Il s'agit d'une application Next.js développée avec Node.js 22.
 
-First, run the development server:
+[https://test-tx-studio.vercel.app/](https://test-tx-studio.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table des Matières
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [À propos du projet](#à-propos-du-projet)
+- [Installation](#installation)
+  - [Installer Node.js 22](#installer-nodejs-22)
+    - [Windows](#windows)
+    - [Mac](#mac)
+    - [Linux](#linux)
+  - [Utiliser un Dev Container](#utiliser-un-dev-container)
+- [Lancer le projet](#lancer-le-projet)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## À propos du projet
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ce projet est une démonstration d'une application Next.js. Il a été développé avec Node.js 22 et inclut des fonctionnalités comme un tableau de bord, des informations financières et la gestion des transactions.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+Pour exécuter ce projet en local, vous devez installer Node.js 22. Vous pouvez l'installer manuellement ou utiliser un Dev Container pour un environnement de développement préconfiguré.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installer Node.js 22
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Windows
 
-## Deploy on Vercel
+1. Téléchargez l'installateur de Node.js 22 depuis le [site officiel de Node.js](https://nodejs.org/).
+2. Lancez l'installateur et suivez les instructions.
+3. Vérifiez l'installation en exécutant la commande suivante dans un terminal :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   node -v
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cela devrait afficher une version comme v22.x.x.
+
+Alternativement, vous pouvez utiliser nvm (Node Version Manager) :
+
+1. Installez nvm-windows depuis le dépôt GitHub de [nvm-windows](https://github.com/coreybutler/nvm-windows).
+2. Ouvrez un terminal et exécutez :
+
+   ```bash
+    nvm install 22
+    nvm use 22
+   ```
+
+3. Vérifiez l'installation en exécutant la commande suivante dans un terminal :
+
+   ```bash
+   node -v
+   ```
+
+Cela devrait afficher une version comme v22.x.x.
+
+#### Mac/Linux
+
+1. Installez nvm en suivant les instructions sur le dépôt GitHub de [nvm](https://github.com/nvm-sh/nvm).
+
+2. Ouvrez un terminal et exécutez :
+
+   ```bash
+    nvm install 22
+    nvm use 22
+   ```
+
+3. Vérifiez l'installation en exécutant la commande suivante dans un terminal :
+
+   ```bash
+   node -v
+   ```
+
+Cela devrait afficher une version comme v22.x.x.
+
+## Utiliser un Dev Container
+
+Si vous préférez un environnement de développement préconfiguré avec Docker, vous pouvez utiliser un Dev Container avec Visual Studio Code.
+
+#### Remarque
+
+Les Dev Containers sont également disponibles pour les IDE JetBrains (comme WebStorm ou IntelliJ IDEA) via des plugins spécifiques. Cependant, ce guide se concentre uniquement sur l'utilisation avec Visual Studio Code.
+
+#### Prérequis supplémentaires pour les Dev Containers
+
+1. Assurez-vous que Docker Desktop (et WSL sur Windows) est installé et configuré correctement.
+
+2. Sur Windows il est recommandé de cloner le projet directement dans le système de fichiers WSL. Cela améliore considérablement les performances lors de l'utilisation de Docker et des Dev Containers.
+
+#### Etape
+
+1. Ouvrez le projet dans VS Code.
+
+2. Installez l'extension Dev Containers :
+
+3. Ouvrez la vue Extensions dans VS Code (Ctrl+Shift+X ou Cmd+Shift+X sur Mac).
+   Recherchez [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) et installez l'extension développée par Microsoft.
+
+4. Lorsque vous y êtes invité, cliquez sur Reopen in Container.
+    Si vous n'êtes pas invité, ouvrez la palette de commandes (Ctrl +Shift+P ou Cmd+Shift+P sur Mac) et sélectionnez Dev Containers: Reopen in Container.
+
+5. Attendez que le conteneur soit construit et démarré. Cela peut prendre quelques minutes lors de la première exécution.
+
+## Lancer le projet
+
+Une fois Node.js 22 installé ou le Dev Container configuré, suivez ces étapes pour lancer le projet :
+
+1. Installez les dépendances :
+
+   ```bash
+   npm install
+   ```
+
+2. Lancez le serveur de développement :
+
+   ```bash
+   npm run dev
+   ```
+
+3. Ouvrez votre navigateur et accédez à http://localhost:3000.
