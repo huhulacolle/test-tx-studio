@@ -7,6 +7,7 @@ import SelectScreen from "../enum/SelectScreen";
 import { useState } from "react";
 import Account from "@/components/pages/dashboard/Account";
 import InfoFinance from "@/components/pages/dashboard/InfoFinance";
+import Transaction from "@/components/pages/dashboard/Transaction";
 
 export default function DashboardPage() {
   const [Screen, setScreen] = useState(SelectScreen.PRET);
@@ -44,6 +45,7 @@ export default function DashboardPage() {
         <div className="flex flex-col gap-11">
           <Account />
           <InfoFinance />
+          <Transaction />
         </div>
       ) : (
         <div></div>
