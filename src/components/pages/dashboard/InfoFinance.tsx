@@ -124,7 +124,7 @@ export default function InfoFinance() {
       <ScrollContainer className="cursor-grab focus:cursor-grabbing">
         <div className="flex gap-5">
           <CardWhite>
-            <div className="w-2xl">
+            <div className="md:w-2xl w-xl">
               <Line options={options} data={data} />
             </div>
           </CardWhite>
@@ -133,48 +133,26 @@ export default function InfoFinance() {
               <Tabs funct={setScreen} selected={Screen} name={ScreenArray} />
             </div>
             <div>
-              <table className="table-auto border-collapse text-sm text-left">
+              <table className="table-auto border-collapse md:text-sm text-xs text-left">
                 <thead className="">
                   <tr className="text-liqtrade-blue">
-                    <th className="px-4 py-2">Tenor</th>
-                    <th className="px-4 py-2">
-                      Market Place
-                    </th>
-                    <th className="px-4 py-2">
-                      Market Risk Free Date
-                    </th>
-                    <th className="px-4 py-2">
-                      Market Risk Free Premium
-                    </th>
-                    <th className="px-4 py-2">
-                      Change %
-                    </th>
-                    <th className="px-4 py-2">
-                      Variation
-                    </th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Tenor</th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Market Place</th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Market Risk Free Date</th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Market Risk Free Premium</th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Change %</th>
+                    <th className="md:px-4 md:py-2 px-2 py-1">Variation</th>
                   </tr>
                 </thead>
                 <tbody>
                   {dataArray.map((row, index) => (
                     <tr key={index}>
-                      <td className="px-4 py-2">
-                        {row.tenor}
-                      </td>
-                      <td className="px-4 py-2">
-                        {row.marketPlace}
-                      </td>
-                      <td className="px-4 py-2">
-                        {row.marketRiskFreeDate}
-                      </td>
-                      <td className="px-4 py-2">
-                        {row.marketRiskFreePremium}
-                      </td>
-                      <td className="px-4 py-2">
-                        {row.changePercent}
-                      </td>
-                      <td className="px-4 py-2">
-                        {row.variation}
-                      </td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.tenor}</td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.marketPlace}</td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.marketRiskFreeDate}</td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.marketRiskFreePremium}</td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.changePercent}</td>
+                      <td className="md:px-4 md:py-2 px-2 py-1">{row.variation}</td>
                     </tr>
                   ))}
                 </tbody>
